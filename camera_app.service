@@ -1,0 +1,16 @@
+[Unit]
+Description=Flask Camera Application
+After=network.target dev-video0.device
+
+[Service]
+ExecStartPre=/bin/sleep 5
+User=pizza
+WorkingDirectory=/home/pizza/flask_cam
+Environment="PATH=/home/pizza/flask_cam/venv/bin"
+ExecStart=/home/pizza/flask_cam/venv/bin/python /home/pizza/flask_cam/app.py
+Restart=always
+Environment=PYTHONUNBUFFERED=1
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
