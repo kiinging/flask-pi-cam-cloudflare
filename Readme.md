@@ -23,8 +23,8 @@ This project turns a Raspberry Pi Zero 2 W into a **lightweight real-time securi
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/kiinging/flask_cam.git
-cd flask_cam
+git clone https://github.com/kiinging/flask-pi-cam-cloudflare.git
+cd flask-pi-cam-cloudflare
 ```
 
 ### 2️⃣ Run the setup script
