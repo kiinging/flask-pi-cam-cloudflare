@@ -12,6 +12,20 @@ This project turns a Raspberry Pi Zero 2 W into a **lightweight real-time securi
 
 ---
 
+## ⚙️ Headless Setup Reference
+
+If you're setting up your Raspberry Pi Zero 2 W **headlessly** (without a monitor or keyboard),
+you can follow this excellent community guide:
+
+> **Guide:** [Raspberry Pi Zero 2 W – Headless Setup (with Static IP) and Pi-hole by @axelhamil](https://gist.github.com/axelhamil/b3787d4cd9e23d228fdd40ee150be4c1)
+
+It walks through creating a bootable SD card with Wi-Fi and SSH preconfigured using **Raspberry Pi Imager**.
+
+---
+
+### ⚠️ Important: Use a 2.4 GHz Wi-Fi Network
+- When configuring Wi-Fi in Raspberry Pi Imager, make sure the SSID corresponds to your **2.4 GHz** band.
+
 ## 🧩 Tested Environment
 
 | Component | Version / Info |
