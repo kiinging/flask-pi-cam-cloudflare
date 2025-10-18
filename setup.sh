@@ -9,9 +9,8 @@ echo "📦 Installing core dependencies for Flask + Picamera2..."
 sudo apt install -y \
     python3-picamera2 --no-install-recommends
 
-
-echo "🧰 Setting up Python virtual environment..."
-python3 -m venv venv
+echo "🧰 Setting up Python virtual environment (with system packages)..."
+python3 -m venv --system-site-packages venv
 source venv/bin/activate
 
 pip install --upgrade pip setuptools wheel
