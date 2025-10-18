@@ -12,6 +12,23 @@ This project turns a Raspberry Pi Zero 2 W into a **lightweight real-time securi
 
 ---
 
+## 🧩 Tested Environment
+
+| Component | Version / Info |
+|------------|----------------|
+| **Hardware** | Raspberry Pi Zero 2 W |
+| **Operating System** | Raspberry Pi OS Lite (64-bit) |
+| **Base Distribution** | Debian 13 “Trixie” (server version) |
+| **Kernel Architecture** | aarch64 |
+| **Python** | 3.11+ (default on Trixie) |
+| **Camera Stack** | `libcamera` + `picamera2` (APT preinstalled) |
+
+> 💡 *Note:* Trixie replaces Bookworm as the current stable base for Raspberry Pi OS (released Oct 2025).  
+> This project has been verified to work on the **64-bit Lite (headless)** image.
+
+
+---
+
 ## 📚 Reference
 
 * Official Picamera2 docs: [🔗 Raspberry Pi GitHub](https://github.com/raspberrypi/picamera2)

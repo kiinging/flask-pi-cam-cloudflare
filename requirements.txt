@@ -1,14 +1,7 @@
 # requirements.txt
 
-# ===============================
-# System dependencies (install via apt before pip install):
-# sudo apt install -y python3-venv python3-dev libatlas-base-dev \
-#     libjpeg-dev libopenjp2-7 libtiff6 libx11-6 \
-#     libcamera-apps python3-libcamera python3-kms++ \
-#     python3-pyqt5 python3-prctl python3-pil python3-pip
-# ===============================
-
+# Minimal Flask video streaming setup for Raspberry Pi Zero 2 W
 flask==3.0.2
+picamera2
 pillow==10.1.0
-numpy==1.26.4
-simplejpeg==1.8.1        # Optimized JPEG encoding
+gunicorn
