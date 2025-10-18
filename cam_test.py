@@ -1,18 +1,17 @@
+#!/usr/bin/python3
+
 from picamera2 import Picamera2
 import time
 
-# Create camera object
 picam2 = Picamera2()
+picam2.configure(picam2.create_still_configuration())
 
-# Configure preview or capture settings (simple still config)
-config = picam2.create_still_configuration()
-picam2.configure(config)
-
-# Start the camera
 picam2.start()
-time.sleep(2)  # Let the sensor warm up
+time.sleep(2)  # let camera warm up
 
-# Capture and save image
-picam2.capture_file("test.jpg")
+metadata = picam2.capture_file("test.jpg")
+print("Captured image saved as test.jpg")
+print(metadata)
 
-print("Image saved as test.jpg")
+picam2.close()
+
