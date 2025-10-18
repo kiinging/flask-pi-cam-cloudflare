@@ -1,7 +1,0 @@
-# requirements.txt
-
-# Minimal Flask video streaming setup for Raspberry Pi Zero 2 W
-flask==3.0.2
-picamera2
-pillow>=10.4.0
-gunicorn==22.0.0   # for production server

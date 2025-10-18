@@ -45,12 +45,17 @@ def capture_frames():
 
             with frame_lock:
                 latest_frame = buf.getvalue()
+                
         except Exception as e:
-            logging.error(f"Capture error: {e}, retrying")
+            logging.error(f"Capture error: {e}, restarting camera...")
+            try:
+                picam2.stop()
+                time.sleep(1)
+                picam2.start()
+            except Exception as e2:
+                logging.error(f"Restart failed: {e2}")
             time.sleep(0.2)
             continue
-        time.sleep(0.1)
-        
 
 # Start capture thread
 threading.Thread(target=capture_frames, daemon=True).start()
@@ -86,5 +91,4 @@ def snapshot():
     return Response(status=404)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=False, use_reloader=False)  # <- disables auto reload
-
+    app.run(host='0.0.0.0', port=5000, debug=False, use_reloader=False, threaded=True)

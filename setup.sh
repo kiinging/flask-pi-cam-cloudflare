@@ -11,7 +11,6 @@ sudo apt install -y \
     python3-libcamera python3-picamera2 python3-kms++ python3-prctl python3-pil \
     libcamera-apps libcap-dev libjpeg-dev libopenjp2-7 libtiff6 libx11-6
 
-
 echo "🧰 Setting up Python virtual environment..."
 python3 -m venv venv
 source venv/bin/activate
@@ -19,7 +18,7 @@ source venv/bin/activate
 pip install --upgrade pip setuptools wheel
 
 echo "🐍 Installing Python packages..."
-pip install -r requirements.txt
+pip install flask pillow picamera2 gunicorn
 
 echo "🧹 Cleaning up..."
 sudo apt autoremove -y
