@@ -56,24 +56,36 @@ This will:
 chmod +x setup.sh
 ./setup.sh
 ```
-
 ---
-## 🧪 Testing
 
-* **Test camera only**:
+### 🧪 Test locally
+
+**Test camera only:**
 
 ```bash
 source venv/bin/activate
 python cam_test.py
 ```
 
-* **Monitor system**:
+**Run the Flask app manually:**
 
 ```bash
-free     # RAM usage
-htop     # CPU & processes
+source venv/bin/activate
+python app.py
 ```
 
+**Or faster with Gunicorn:**
+
+```bash
+source venv/bin/activate
+gunicorn -b 0.0.0.0:5000 app:app --threads 2
+```
+
+Then open your browser to:
+
+```
+http://<pi-ip>:5000
+```
 ---
 ## 🛠 Auto-start with systemd
 
