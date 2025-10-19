@@ -126,16 +126,16 @@ sudo systemctl status camera_app
 ```
 
 ---
+### 🛑 To stop your background camera service (for diagnosis)
 
-## 🌐 Local Access
-
-Once running, open:
-
+```bash
+sudo systemctl stop camera_app
 ```
-http://<pi-ip>:5000
-```
+
+That immediately stops the Gunicorn process that’s streaming video.
 
 ---
+
 
 # 🌍 PART 2: Cloudflare Tunnel (Secure Remote Access)
 

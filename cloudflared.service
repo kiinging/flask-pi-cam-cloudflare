@@ -1,6 +1,6 @@
 [Unit]
 Description=Cloudflare Tunnel
-After=network.target
+After=network.target camera_app.service
 
 [Service]
 User=pizza
